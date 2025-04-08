@@ -1,0 +1,24 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const post_1 = require("../controller/post");
+const get_1 = require("../controller/get");
+const put_1 = require("../controller/put");
+const delete_1 = require("../controller/delete");
+const router = express_1.default.Router();
+router.post('/chapters', post_1.createChapter);
+router.post('/chapters/:chapterId/subjects', post_1.addSubject);
+router.post('/chapters/:chapterId/subjects/:subjectId/notes', post_1.addNotes);
+router.get('/getchapters', get_1.getchapter);
+router.get('/chapters/:chapterId/getsubjects', get_1.getsubject);
+router.get('/chapters/:chapterId/subjects/:subjectId/getnotes', get_1.getNotes);
+router.put('/updatechapter/:id', put_1.updatechapter);
+router.put('/chapter/:id/updatesubject', put_1.updatesubject);
+router.put('/chapter/:id/updatenotes', put_1.updatenotes);
+router.delete('/deletechapter/:id', delete_1.deletechapter);
+router.delete('/deletesubject/:id', delete_1.deletesubject);
+router.delete('/deletenotes/:id', delete_1.deletenotes);
+exports.default = router;

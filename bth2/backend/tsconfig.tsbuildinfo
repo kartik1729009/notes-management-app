@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/config/connect.ts","./src/controller/delete.ts","./src/controller/get.ts","./src/controller/post.ts","./src/controller/put.ts","./src/models/chemistrymodel.ts","./src/models/mathsmodel.ts","./src/models/physicsmodel.ts","./src/routes/routes.ts"],"version":"5.8.2"}

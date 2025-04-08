@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/config/dbconnect.ts","./src/controller/auth.ts","./src/models/models.ts","./src/routes/routes.ts"],"version":"5.8.2"}
